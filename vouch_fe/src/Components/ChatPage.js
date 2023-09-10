@@ -5,6 +5,7 @@ import ChatFooter from './ChatFooter';
 
 const ChatPage = ({ socket }) => {
     const [messages, setMessages] = useState([]);
+    const roomid = localStorage.getItem("roomid")
     const fetchMessageData = () => {
       fetch("http://localhost:3001/messages",{
         method: 'POST',
@@ -22,7 +23,7 @@ const ChatPage = ({ socket }) => {
             setMessages(data)
         })
     }
-    socket.join(localStorage.getItem("roomid"));
+    socket.join(roomid);
     useEffect(() => {
         fetchMessageData()
         socket.on('messageResponse', (data) => setMessages([...messages, data]));
