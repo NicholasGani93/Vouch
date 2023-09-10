@@ -42,6 +42,7 @@ npm install
 - Split repository between frontend and backend
 
 ## Assume your application will go into production...
+- Split branch staging and production
 - Running unit testing, with at least 70% code coverage
 - Running black box testing based on use case
 - Running load test for expected user
