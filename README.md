@@ -40,6 +40,7 @@ npm install
 - Maybe encrypt the message (depends on the use case)
 - More refactor the code
 - Split repository between frontend and backend
+- More testing
 
 ## Assume your application will go into production...
 - Split branch staging and production
